@@ -47,7 +47,7 @@ jobs:
         key: ${{ github.workflow }}-v5-${{ github.sha }}
         restore-keys: ${{ github.workflow }}-v5-
 
-        - name: Copiar Source-Cheats.zip
+    - name: Copiar Source-Cheats.zip
       run: |
         mkdir -p android-project/app/src/main/assets
         cp tools/Source-Cheats.zip android-project/app/src/main/assets/
@@ -55,7 +55,7 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}
       shell: bash
-      run: cd android-project && ./gradlew assembleDebug -PcmakeArgs=" -DDEBUGON=ON"
+      run: cd android-project && ./gradlew assembleDebug -PcmakeArgs="-DDEBUGON=ON"
 
     - name: Upload-Package
       if: ${{ !env.ACT }}
