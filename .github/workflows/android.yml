@@ -47,6 +47,11 @@ jobs:
         key: ${{ github.workflow }}-v5-${{ github.sha }}
         restore-keys: ${{ github.workflow }}-v5-
 
+        - name: Copiar Source-Cheats.zip
+      run: |
+        mkdir -p android-project/app/src/main/assets
+        cp tools/Source-Cheats.zip android-project/app/src/main/assets/
+
     - name: Build
       working-directory: ${{github.workspace}}
       shell: bash
