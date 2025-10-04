@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnGodMode"
+        android:text="God Mode"/>
+
+    <Button
+        android:id="@+id/btnGold"
+        android:text="Oro Infinito"/>
+
+    <Button
+        android:id="@+id/btnStats"
+        android:text="Max Stats"/>
+
+    <Button
+        android:id="@+id/btnSpells"
+        android:text="Hechizos al Máximo"/>
+</LinearLayout>
